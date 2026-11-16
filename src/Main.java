@@ -23,20 +23,26 @@ public class Main {
                 "Elösször az X aztán az Y koordinátát.");
 
         int palyameret = 0;
+        int tippszam = 100;
         //System.out.println(szint);
 
         switch (szint) {
             case "Könnyű" :
                 palyameret = 8;
+                tippszam = 12;
                 break;
             case "Közepes" :
                 palyameret = 20;
+                tippszam = 20;
                 break;
             case "Nehéz" :
                 palyameret = 50;
+                tippszam = 35;
                 break;
         }
         //System.out.println(palyameret);
+
+        System.out.println("A " + szint + "szinthez egy " + palyameret+"x"+palyameret + "-as pálya van és " + tippszam + " tipp lehetőség.");
 
         int kincs_kor_x = (int) (Math.floor(Math.random()*palyameret)+1);
         int kincs_kor_y = (int) (Math.floor(Math.random()*palyameret)+1);
@@ -78,8 +84,9 @@ public class Main {
                         System.out.println("Szuper, Megtaláltad a kincset!");
                     }
 
+
                 }
-                while (tavolsag != 0);
+                while (tavolsag != 0 && tippszam != 0);
 
                 break;
 
@@ -109,7 +116,7 @@ public class Main {
                         System.out.println("Jéghideg");
                     }
 
-                    if ( tavolsag == 0 ) {
+                    if ( tavolsag == 0 && tippszam != 0) {
                         System.out.println("Szuper, Megtaláltad a kincset!");
                     }
 
@@ -144,7 +151,7 @@ public class Main {
                         System.out.println("Jéghideg");
                     }
 
-                    if ( tavolsag == 0 ) {
+                    if ( tavolsag == 0 && tippszam != 0) {
                         System.out.println("Szuper, Megtaláltad a kincset!");
                     }
 
