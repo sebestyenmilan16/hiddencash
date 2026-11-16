@@ -17,8 +17,10 @@ public class Main {
             }
         }
 
-
         while ( !szint.equals("Könnyű") && !szint.equals("Nehéz") && !szint.equals("Közepes"));
+
+        System.out.println("A játékban tippelni kell a koordinátákat.\n" +
+                "Elösször az X aztán az Y koordinátát.");
 
         int palyameret = 0;
         //System.out.println(szint);
@@ -39,7 +41,7 @@ public class Main {
         int kincs_kor_x = (int) (Math.floor(Math.random()*palyameret)+1);
         int kincs_kor_y = (int) (Math.floor(Math.random()*palyameret)+1);
 
-        System.out.println("x: " + kincs_kor_x + " y: " + kincs_kor_y);
+        //System.out.println("x: " + kincs_kor_x + " y: " + kincs_kor_y);
 
         int tipp_x = 0;
         int tipp_y = 0;
@@ -94,13 +96,13 @@ public class Main {
                     if (tavolsag < 2) {
                         System.out.println("Nagyon meleg");
                     }
-                    if (tavolsag > 2 && tavolsag <= 5) {
+                    if (tavolsag > 2 && tavolsag <= 6) {
                         System.out.println("Meleg");
                     }
-                    if (tavolsag > 5 && tavolsag <= 10) {
+                    if (tavolsag > 6 && tavolsag <= 11) {
                         System.out.println("Langyos");
                     }
-                    if (tavolsag > 10 && tavolsag <= 15) {
+                    if (tavolsag > 11 && tavolsag <= 15) {
                         System.out.println("Hideg");
                     }
                     if (tavolsag > 15) {
@@ -135,7 +137,7 @@ public class Main {
                     if (tavolsag > 5 && tavolsag <= 15) {
                         System.out.println("Langyos");
                     }
-                    if (tavolsag > 10 && tavolsag <= 25) {
+                    if (tavolsag > 15 && tavolsag <= 25) {
                         System.out.println("Hideg");
                     }
                     if (tavolsag > 25) {
