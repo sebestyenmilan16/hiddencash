@@ -57,6 +57,7 @@ public class Main {
             case "Könnyű" :
 
                 do {
+                    tippszam--;
                     System.out.println("\nAdj meg egy koordinátát:");
 
                     do {
@@ -99,10 +100,17 @@ public class Main {
                     if (tavolsag > 7) {
                         System.out.println("Jéghideg");
                     }
+                    System.out.println("Tipp lehetőségek még: " + tippszam);
 
-                    if ( tavolsag == 0 ) {
+                    if ( tavolsag == 0 && tippszam != 0) {
                         System.out.println("Szuper, Megtaláltad a kincset!");
                     }
+
+                    if ( tippszam == 0 ) {
+                        System.out.println("Elfogytak a lehetőségeid, sajnos nem találtad meg a kincset.");
+                    }
+
+
 
 
                 }
@@ -113,6 +121,7 @@ public class Main {
             case "Közepes" :
 
                 do {
+                    tippszam--;
                     System.out.println("\nAdj meg egy koordinátát:");
                     System.out.print("X: ");
                     tipp_x = scan.nextInt();
@@ -136,18 +145,27 @@ public class Main {
                         System.out.println("Jéghideg");
                     }
 
+                    System.out.println("Tipp lehetőségek még: " + tippszam);
+
                     if ( tavolsag == 0 && tippszam != 0) {
                         System.out.println("Szuper, Megtaláltad a kincset!");
                     }
 
+                    if ( tippszam == 0 ) {
+                        System.out.println("Elfogytak a lehetőségeid, sajnos nem találtad meg a kincset.");
+                    }
+
+
+
                 }
-                while (tavolsag != 0);
+                while (tavolsag != 0 && tippszam != 0);
 
                 break;
 
             case "Nehéz" :
 
                 do {
+                    tippszam--;
                     System.out.println("\nAdj meg egy koordinátát:");
                     System.out.print("X: ");
                     tipp_x = scan.nextInt();
@@ -171,12 +189,19 @@ public class Main {
                         System.out.println("Jéghideg");
                     }
 
+                    System.out.println("Tipp lehetőségek még: " + tippszam);
+
                     if ( tavolsag == 0 && tippszam != 0) {
                         System.out.println("Szuper, Megtaláltad a kincset!");
                     }
 
+                    if ( tippszam == 0 ) {
+                        System.out.println("Elfogytak a lehetőségeid, sajnos nem találtad meg a kincset.");
+                    }
+
+
                 }
-                while (tavolsag != 0);
+                while (tavolsag != 0 && tippszam != 0);
 
                 break;
         }
