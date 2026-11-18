@@ -42,7 +42,7 @@ public class Main {
         }
         //System.out.println(palyameret);
 
-        System.out.println("A " + szint + "szinthez egy " + palyameret+"x"+palyameret + "-as pálya van és " + tippszam + " tipp lehetőség.");
+        System.out.println("A " + szint + " szinthez egy " + palyameret+"x"+palyameret + "-as pálya van és " + tippszam + " tipp lehetőség.");
 
         int kincs_kor_x = (int) (Math.floor(Math.random()*palyameret)+1);
         int kincs_kor_y = (int) (Math.floor(Math.random()*palyameret)+1);
@@ -58,10 +58,30 @@ public class Main {
 
                 do {
                     System.out.println("\nAdj meg egy koordinátát:");
-                    System.out.print("X: ");
-                    tipp_x = scan.nextInt();
-                    System.out.print("Y: ");
-                    tipp_y = scan.nextInt();
+
+                    do {
+                        System.out.print("X: ");
+                        tipp_x = scan.nextInt();
+                        if (tipp_x < 0) {
+                            System.out.print("Add meg újra az X-et: ");
+                            tipp_x = scan.nextInt();
+                        }
+
+                    }
+                    while ( tipp_x < 0);
+
+                    do {
+                        System.out.print("Y: ");
+                        tipp_y = scan.nextInt();
+                        if (tipp_y < 0) {
+                            System.out.print("Add meg újra az Y-t: ");
+                            tipp_y = scan.nextInt();
+                        }
+                    }
+                    while ( tipp_y < 0);
+
+
+
 
                     tavolsag = (Math.abs(kincs_kor_x - tipp_x) + Math.abs(kincs_kor_y - tipp_y));
                     if (tavolsag < 2) {
